@@ -1,0 +1,6 @@
+
+.item{
+    border-box:box-sizing;
+    width:100%;
+    cursor: move;
+}
