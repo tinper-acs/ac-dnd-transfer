@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Transfer } from 'tinper-bee';
 const propTypes = {
-    title: PropTypes.string, 
+    title: PropTypes.string,
 };
-import 'tinper-bee/assets/tinper-bee.css';
+import './index.css'
 class AcDndTransfer extends Component {
     constructor(props, context) {
       super(props, context);
@@ -16,7 +16,7 @@ class AcDndTransfer extends Component {
       this.dragEnd=this.dragEnd.bind(this)
     }
     componentDidMount() {
-     
+
     }
     dragEnter(e,key){
       console.log('enterKey',key)
@@ -46,7 +46,7 @@ class AcDndTransfer extends Component {
       } = this.state
       console.log(targetKeys)
       return (
-        <Transfer 
+        <Transfer
           {...this.props}
           targetKeys={targetKeys}
           render={(da)=>{
@@ -60,5 +60,5 @@ class AcDndTransfer extends Component {
     }
   };
 
-AcDndTransfer.propTypes = propTypes; 
+AcDndTransfer.propTypes = propTypes;
 export default AcDndTransfer;
